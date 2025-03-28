@@ -1,3 +1,4 @@
+
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { getImagePath } from '../../utils/imagePath';
@@ -10,9 +11,10 @@ export default function BlogPost1() {
     <Layout title="Evaluating LLM Multi-Agent Systems - Zhuoyang Zou's Blog">
       <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
         <div className="mb-8">
-          <Link href={isProduction ? `${basePath}/blog/` : "/blog/"} className="text-blue-600 hover:underline flex items-center">
+          {/* Fixed blog back link to use absolute path */}
+          <a href={`${basePath}/blog/`} className="text-blue-600 hover:underline flex items-center">
             ← Back to all posts
-          </Link>
+          </a>
         </div>
         
         <h1 className="text-3xl font-bold text-blue-900 mb-4">Evaluating LLM Multi-Agent Systems for Scientific Research</h1>

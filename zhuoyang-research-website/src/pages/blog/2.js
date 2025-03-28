@@ -1,18 +1,20 @@
+
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import { getImagePath } from '../../utils/imagePath';
 
-export default function BlogPost2() {
+export default function BlogPost1() {
   const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = isProduction
+  const basePath = isProduction ? '/zhuoyang' : '';
   
   return (
-    <Layout title="Medical Image Analysis with Deep Learningß - Zhuoyang Zou's Blog">
+    <Layout title="Evaluating LLM Multi-Agent Systems - Zhuoyang Zou's Blog">
       <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
         <div className="mb-8">
-          <Link href={"/blog/"} className="text-blue-600 hover:underline flex items-center">
+          {/* Fixed blog back link to use absolute path */}
+          <a href={`${basePath}/blog/`} className="text-blue-600 hover:underline flex items-center">
             ← Back to all posts
-          </Link>
+          </a>
         </div>
         
         <h1 className="text-3xl font-bold text-blue-900 mb-4">Advancements in Medical Image Analysis with Deep Learning</h1>
