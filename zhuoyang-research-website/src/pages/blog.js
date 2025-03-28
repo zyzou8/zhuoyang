@@ -35,6 +35,7 @@ export default function Blog() {
         <p className="text-lg mb-8">
           Welcome to my research blog, where I share thoughts, insights, and updates about my work in AI, 
           multi-agent systems, and healthcare applications. Check back regularly for new content!
+          This Page is comming soon! 
         </p>
         
         <div className="space-y-8">
