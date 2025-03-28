@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function GithubLink({ href, children, ...props }) {
   // For client-side navigation, use the Next.js Link component
   // For static export on GitHub Pages, adjust the href path
-  const basePath = process.env.NODE_ENV === 'production' ? '/zhuoyang-research-website' : '';
+  const basePath = process.env.NODE_ENV === 'production' ? '/zhuoyang' : '';
   const adjustedHref = href.startsWith('/') ? `${basePath}${href}` : href;
   
   return (
