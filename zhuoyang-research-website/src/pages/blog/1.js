@@ -4,7 +4,7 @@ import { getImagePath } from '../../utils/imagePath';
 
 export default function BlogPost1() {
   const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = process.env.NODE_ENV === 'production';
+  const basePath = isProduction ? '/zhuoyang' : '';
   
   return (
     <Layout title="Evaluating LLM Multi-Agent Systems - Zhuoyang Zou's Blog">
