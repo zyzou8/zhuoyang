@@ -18,13 +18,13 @@ export default function Blog() {
       excerpt: "An overview of recent progress in applying deep learning techniques to medical imaging, with a focus on our work on radiation pneumonitis prediction.",
       tags: ["Medical AI", "Deep Learning", "CNN-RNN"]
     },
-    {
-      id: 3,
-      title: "Teaching AI Concepts to Undergraduate Students",
-      date: "January 20, 2025",
-      excerpt: "Reflections on my experience teaching AI fundamentals and open-source LLMs to undergraduate computer science students at Penn State.",
-      tags: ["Education", "Teaching", "AI Fundamentals"]
-    }
+    // {
+    //   id: 3,
+    //   title: "Teaching AI Concepts to Undergraduate Students",
+    //   date: "January 20, 2025",
+    //   excerpt: "Reflections on my experience teaching AI fundamentals and open-source LLMs to undergraduate computer science students at Penn State.",
+    //   tags: ["Education", "Teaching", "AI Fundamentals"]
+    // }
   ];
 
   return (
