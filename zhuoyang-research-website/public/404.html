@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Extract the repository name from the pathname
+    var repoName = window.location.pathname.split('/')[1]; 
+    var redirectPath = '/' + repoName;
+    window.location.replace(redirectPath);
+  </script>
+</head>
+<body>
+  Redirecting to homepage...
+</body>
+</html>

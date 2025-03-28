@@ -3,7 +3,7 @@ import Education from '../components/Education';
 import Publications from '../components/Publications';
 import ResearchInterests from '../components/ResearchInterests';
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from 'react-icons/fa';
-
+import { getImagePath } from '../utils/imagePath';
 export default function Home() {
   return (
     <Layout title="Zhuoyang Zou - AI Researcher">
@@ -13,11 +13,11 @@ export default function Home() {
           <div className="bg-white rounded-lg shadow-md p-6 sticky top-8">
             <div className="flex flex-col items-center">
               <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
-                <img
-                  src="/profile-photo.jpg"
-                  alt="Zhuoyang Zou"
-                  className="w-full h-full object-cover"
-                />
+              <img
+                src={getImagePath("profile-photo.jpg")}
+                alt="Zhuoyang Zou"
+                className="w-full h-full object-cover"
+              />
               </div>
               <h1 className="text-2xl font-bold text-center">Zhuoyang Zou</h1>
               <p className="text-gray-600 text-center mt-1">PhD Student in Computer Science</p>

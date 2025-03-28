@@ -1,14 +1,24 @@
 #!/bin/bash
 
-# Clean previous builds
+echo "Starting GitHub Pages deployment..."
+
+# Remove previous builds
 rm -rf .next out
 
-# Build and export the site
-npm run build
+# Build the site
+echo "Building site..."
+NEXT_PUBLIC_DEPLOY_ENV=production npm run build
 
-# Ensure styles are copied to out directory
-mkdir -p out/_next/static/css
-cp .next/static/css/* out/_next/static/css/
+# Create .nojekyll file to bypass Jekyll processing
+echo "Creating .nojekyll file..."
+touch out/.nojekyll
+
+# Copy 404.html to handle client-side routing
+echo "Setting up 404 handling..."
+cp public/404.html out/404.html
 
 # Deploy to GitHub Pages
+echo "Deploying to GitHub Pages..."
 npx gh-pages -d out -t true
+
+echo "Deployment complete!"
