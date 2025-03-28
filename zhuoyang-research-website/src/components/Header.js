@@ -1,5 +1,4 @@
-// src/components/Header.js
-import GithubLink from './GithubLink';
+import CustomLink from './CustomLink';
 import { useRouter } from 'next/router';
 
 export default function Header() {
@@ -13,30 +12,30 @@ export default function Header() {
       <div className="container mx-auto px-4 py-5">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="text-2xl font-bold mb-4 md:mb-0">
-            <GithubLink href="/" className="hover:text-blue-200 transition duration-300">
+            <CustomLink href="/" className="hover:text-blue-200 transition duration-300">
               Zhuoyang Zou
-            </GithubLink>
+            </CustomLink>
           </div>
           
           <nav>
             <ul className="flex space-x-6">
               <li>
-                <GithubLink href="/" 
+                <CustomLink href="/" 
                   className={`hover:text-blue-200 transition duration-300 ${isActive('/') ? 'font-bold border-b-2 border-white' : ''}`}>
                   Home
-                </GithubLink>
+                </CustomLink>
               </li>
               <li>
-                <GithubLink href="/research/"
+                <CustomLink href="/research/" 
                   className={`hover:text-blue-200 transition duration-300 ${isActive('/research') ? 'font-bold border-b-2 border-white' : ''}`}>
                   Research
-                </GithubLink>
+                </CustomLink>
               </li>
               <li>
-                <GithubLink href="/blog/"
+                <CustomLink href="/blog/" 
                   className={`hover:text-blue-200 transition duration-300 ${isActive('/blog') ? 'font-bold border-b-2 border-white' : ''}`}>
                   Blog
-                </GithubLink>
+                </CustomLink>
               </li>
             </ul>
           </nav>
