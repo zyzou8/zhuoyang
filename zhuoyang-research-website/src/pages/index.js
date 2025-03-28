@@ -4,6 +4,7 @@ import Publications from '../components/Publications';
 import ResearchInterests from '../components/ResearchInterests';
 import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { getImagePath } from '../utils/imagePath';
+import { getAssetPath } from '../utils/assetPath';
 export default function Home() {
   return (
     <Layout title="Zhuoyang Zou - AI Researcher">
@@ -14,7 +15,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="w-48 h-48 rounded-full overflow-hidden mb-4">
               <img
-                src={getImagePath("profile-photo.jpg")}
+                src={getAssetPath("profile-photo.jpg")}
                 alt="Zhuoyang Zou"
                 className="w-full h-full object-cover"
               />
