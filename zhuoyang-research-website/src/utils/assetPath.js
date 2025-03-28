@@ -5,7 +5,7 @@ export function getAssetPath(path) {
     
     // In production (GitHub Pages), add the repository name to the path
     if (process.env.NODE_ENV === 'production') {
-      return `/zhuoyang-research-website/${cleanPath}`;
+      return `/${cleanPath}`;
     }
     
     // In development, use the path as is with a leading slash

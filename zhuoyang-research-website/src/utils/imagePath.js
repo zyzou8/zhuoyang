@@ -4,7 +4,7 @@ export function getImagePath(path) {
     
     // In production (GitHub Pages), add the repository name to the path
     if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
-      return `/zhuoyang-research-website/${cleanPath}`;
+      return `${cleanPath}`;
     }
     
     // In development, use the path as is, ensuring it has a leading slash
