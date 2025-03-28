@@ -4,7 +4,7 @@ import { getImagePath } from '../../utils/imagePath';
 
 export default function BlogPost2() {
   const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = isProduction ? '/zhuoyang' : '';
+  const basePath = isProduction
   
   return (
     <Layout title="Medical Image Analysis with Deep Learning - Zhuoyang Zou's Blog">
