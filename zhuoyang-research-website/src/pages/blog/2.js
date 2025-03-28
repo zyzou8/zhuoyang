@@ -4,10 +4,10 @@ import { getImagePath } from '../../utils/imagePath';
 
 export default function BlogPost2() {
   const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = isProduction
+  const basePath = process.env.NODE_ENV === 'production';
   
   return (
-    <Layout title="Medical Image Analysis with Deep Learning - Zhuoyang Zou's Blog">
+    <Layout title="Medical Image Analysis with Deep Learningß - Zhuoyang Zou's Blog">
       <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
         <div className="mb-8">
           <Link href={isProduction ? `${basePath}/blog/` : "/blog/"} className="text-blue-600 hover:underline flex items-center">
