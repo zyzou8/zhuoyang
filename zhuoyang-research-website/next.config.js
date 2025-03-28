@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   
-  // GitHub Pages configuration
-  basePath: process.env.NODE_ENV === 'production' ? '/zhuoyang-research-website' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/zhuoyang-research-website/' : '',
+  // Use the correct repository name
+  basePath: process.env.NODE_ENV === 'production' ? '/zhuoyang' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/zhuoyang/' : '',
   
   // Required for static export
   output: 'export',
