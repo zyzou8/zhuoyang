@@ -30,12 +30,14 @@ export default function BlogPost1() {
         <div className="prose prose-lg max-w-none">
           <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4">Introduction: The Evolution of LLM Capabilities</h2>
           <p>
-            Language Models have evolved dramatically over the past few years. Initially, LLMs were primarily designed to process user queries and generate relevant responses based on their training data—essentially functioning as sophisticated knowledge repositories with limited reasoning capabilities. When prompted, these early models would typically produce a single-step response without much deliberation or interaction with external information.
+            LLMs were primarily designed to process user queries and generate relevant responses based on their training data—essentially functioning as sophisticated knowledge repositories with limited reasoning capabilities. When prompted, 
+            these early models would typically produce a single-step response without much deliberation or interaction with external information.
           </p>
 
           <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4">What is ReAct?</h2>
           <p>
-            ReAct, short for "Reasoning + Acting," represents a significant advancement in how language models approach complex tasks. Introduced in the paper <a href="https://arxiv.org/abs/2210.03629" className="text-blue-600 hover:underline">ReAct: Synergizing Reasoning and Acting in Language Models</a> by Yao et al., this framework enables LLMs to interleave reasoning traces and task-specific actions in a synergistic way.
+            ReAct, short for "Reasoning + Acting," represents a significant advancement in how language models approach complex tasks. 
+            Introduced in the paper <a href="https://arxiv.org/abs/2210.03629" className="text-blue-600 hover:underline">ReAct: Synergizing Reasoning and Acting in Language Models</a> by Yao et al., this framework enables LLMs to interleave reasoning traces and task-specific actions in a synergistic way.
           </p>
 
           <h2 className="text-2xl font-semibold text-blue-800 mt-6 mb-4">How ReAct Works: The Reasoning-Acting Loop</h2>
