@@ -5,7 +5,7 @@ export default function Blog() {
   // Sample blog posts - you'll replace these with your actual blog content
   const blogPosts = [
     {
-      id: 1,
+      id: ReAct,
       title: "Reflection of ReAct: Synergizing Reasoning and Acting in Language Models",
       date: "May 16, 2025",
       excerpt: "In this Post, I will discuss ReAct, short for Reasoning + Acting, represents a significant advancement in how language models approach complex tasks.",
