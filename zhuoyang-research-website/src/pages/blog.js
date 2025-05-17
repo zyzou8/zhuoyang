@@ -13,10 +13,10 @@ export default function Blog() {
     },
     {
       id: 2,
-      title: "Advancements in Medical Image Analysis with Deep Learning",
-      date: "February 28, 2025",
-      excerpt: "An overview of recent progress in applying deep learning techniques to medical imaging, with a focus on our work on radiation pneumonitis prediction.",
-      tags: ["Medical AI", "Deep Learning", "CNN-RNN"]
+      title: "Reflection of Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      date: "May 17, 2025",
+      excerpt: "Lifelong learning agent",
+      tags: ["LLM", "Multi-agent systems", ",Memory","Research"]
     },
     // {
     //   id: 3,

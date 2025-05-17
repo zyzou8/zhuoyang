@@ -17,8 +17,8 @@ export default function BlogPost1() {
           </a>
         </div>
         
-        <h1 className="text-3xl font-bold text-blue-900 mb-4">Advancements in Medical Image Analysis with Deep Learning</h1>
-        <div className="text-gray-600 mb-6">February 28, 2025</div>
+        <h1 className="text-3xl font-bold text-blue-900 mb-4">Reflection of Voyager: An Open-Ended Embodied Agent with Large Language Models</h1>
+        <div className="text-gray-600 mb-6">May 17, 2025</div>
         
         <div className="flex flex-wrap gap-2 mb-8">
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Medical AI</span>
@@ -27,7 +27,7 @@ export default function BlogPost1() {
         </div>
         
         <div className="prose prose-lg max-w-none">
-          <h2>Deep Learning for Medical Imaging</h2>
+          <h2>TBC</h2>
           {/* <p>The application of deep learning to medical imaging has revolutionized how we diagnose and predict various conditions. Our work focuses specifically on radiation pneumonitis prediction from CT scans.</p>
           
           <h2>The iTox Model</h2>

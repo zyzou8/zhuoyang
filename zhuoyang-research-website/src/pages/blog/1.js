@@ -7,7 +7,7 @@ export default function BlogPost1() {
   const basePath = isProduction ? '/zhuoyang' : '';
   
   return (
-    <Layout title="Evaluating LLM Multi-Agent Systems - Zhuoyang Zou's Blog">
+    <Layout title="ReAct: Synergizing Reasoning and Acting in Language Models">
       <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
         <div className="mb-8">
           {/* Fixed blog back link to use absolute path */}
@@ -24,7 +24,7 @@ export default function BlogPost1() {
         <div className="flex flex-wrap gap-2 mb-8">
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">LLM</span>
           <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Multi-agent systems</span>
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Research</span>
+          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Reasoning</span>
         </div>
         
         <div className="prose prose-lg max-w-none">
