@@ -6,9 +6,9 @@ export default function Blog() {
   const blogPosts = [
     {
       id: 1,
-      title: "Evaluating LLM Multi-Agent Systems for Scientific Research",
-      date: "March 15, 2025",
-      excerpt: "In this post, I discuss our recent experiments with multiple LLM agents collaborating to evaluate research papers and identify potential weaknesses.",
+      title: "Reflection of ReAct: Synergizing Reasoning and Acting in Language Models",
+      date: "May 16, 2025",
+      excerpt: "In this Post, I will discuss ReAct, short for Reasoning + Acting, represents a significant advancement in how language models approach complex tasks.",
       tags: ["LLM", "Multi-agent systems", "Research"]
     },
     {
