@@ -33,9 +33,8 @@ export default function Blog() {
         <h1 className="text-3xl font-bold mb-6 text-blue-900">Blog</h1>
         
         <p className="text-lg mb-8">
-          Welcome to my research blog, where I share thoughts, insights, and updates about my work in AI, 
+          Welcome to my research blog, where I share thoughts, insights, and updates about my readings in AI, 
           multi-agent systems, and healthcare applications. Check back regularly for new content!
-          This Page is comming soon! 
         </p>
         
         <div className="space-y-8">
