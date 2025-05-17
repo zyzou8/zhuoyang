@@ -16,7 +16,7 @@ export default function Blog() {
       title: "Reflection of Voyager: An Open-Ended Embodied Agent with Large Language Models",
       date: "May 17, 2025",
       excerpt: "Lifelong learning agent",
-      tags: ["LLM", "Multi-agent systems", ",Memory","Research"]
+      tags: ["LLM", "Multi-agent systems", "Memory","Research"]
     },
     // {
     //   id: 3,
@@ -33,9 +33,10 @@ export default function Blog() {
         <h1 className="text-3xl font-bold mb-6 text-blue-900">Blog</h1>
         
         <p className="text-lg mb-8">
-          Welcome to my research blog, where I share thoughts, insights, and updates about my readings in AI, 
-          multi-agent systems, and healthcare applications. Check back regularly for new content!
-        </p>
+  Welcome to my AI Research Blogs! Dive into the fascinating world of artificial intelligence, multi-agent systems, and healthcare innovations with me. 
+  Whether you're looking for concise breakdowns of groundbreaking papers or thoughtful analyses of classic research, you'll find it all here. 
+  I'm passionate about making complex concepts accessible. Come explore, and join the conversation!
+</p>
         
         <div className="space-y-8">
           {blogPosts.map((post) => (
