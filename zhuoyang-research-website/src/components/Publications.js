@@ -1,9 +1,9 @@
 export default function Publications() {
   const publications = [
-          {
+      {
       title: "DIAGPaper: Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning",
       authors: "Zhuoyang Zou, Wenpeng Yin, et al.",
-      venue: "Under Review",
+      venue: "ACL 2026 Conference Submission",
       year: "2026",
       link: "https://arxiv.org/abs/2601.07611"
     },
