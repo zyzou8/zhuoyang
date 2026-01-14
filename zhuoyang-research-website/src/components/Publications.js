@@ -9,7 +9,7 @@ export default function Publications() {
     },
     {
       title: "Optimizing Deep Learning Models: CNN-RNN Augmentation with Grad-CAM Analysis for Predicting Pneumonitis from Pre-Treatment CT Images",
-      authors: "Z. Zou, P.T. Teo, A. Yalamanchili, M. Abazeed",
+      authors: "Zhuoyang Zou, P.T. Teo, A. Yalamanchili, M. Abazeed",
       venue: "International Journal of Radiation Oncology, Biology, Physics",
       year: "2024",
       link: "https://www.redjournal.org/article/S0360-3016(24)02234-X/fulltext"
@@ -19,7 +19,7 @@ export default function Publications() {
       authors: "Renze Lou, Hanzi Xu, Zhuoyang Zou, et al.",
       venue: "ICML 2025 Conference Submission. Workshop Best Paper Award",
       year: "2025",
-      link: "https://arxiv.org/pdf/2410.22394"
+      link: "https://arxiv.org/abs/2410.22394"
     },
     {
       title: "HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?",
