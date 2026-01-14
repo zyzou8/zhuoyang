@@ -70,8 +70,8 @@ export default function Home() {
           </section>
           
           <ResearchInterests />
-          <Education />
           <Publications />
+          <Education />
         </div>
       </div>
     </Layout>
