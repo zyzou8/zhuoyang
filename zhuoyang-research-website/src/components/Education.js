@@ -23,7 +23,7 @@ export default function Education() {
       degree: "Bachelor of Science in Computer Science",
       period: "Sep. 2017 – May 2022",
       location: "Hong Kong",
-      details:<a href="https://www.cse.cuhk.edu.hk/~qdou/team.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+      details:<a href="https://www.cse.cuhk.edu.hk/~qdou/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
       PI: Prof. Qi Dou
     </a>
     }
