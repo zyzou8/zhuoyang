@@ -1,5 +1,12 @@
 export default function Publications() {
   const publications = [
+          {
+      title: "DIAGPaper: Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning",
+      authors: "Zhuoyang Zou, Wenpeng Yin, et al.",
+      venue: "Under Review",
+      year: "2026",
+      link: "https://arxiv.org/abs/2601.07611"
+    },
     {
       title: "Optimizing Deep Learning Models: CNN-RNN Augmentation with Grad-CAM Analysis for Predicting Pneumonitis from Pre-Treatment CT Images",
       authors: "Z. Zou, P.T. Teo, A. Yalamanchili, M. Abazeed",
@@ -19,14 +26,7 @@ export default function Publications() {
       authors: "Yusen Zhang, Wenliang Zheng, Zhuoyang Zou, et al.",
       venue: "ICCV 2025 Conference Submission",
       year: "2025",
-      link: "#"
-    },
-    {
-      title: "Training Medical LLMs: A Guideline for Medical Scientists",
-      authors: "Zhuoyang Zou, Wenpeng Yin, et al.",
-      venue: "Under Review",
-      year: "2025",
-      link: "#"
+      link: "https://arxiv.org/abs/2504.18406"
     }
   ];
 

@@ -9,14 +9,14 @@ export default function Blog() {
       title: "Reflection of ReAct: Synergizing Reasoning and Acting in Language Models",
       date: "May 16, 2025",
       excerpt: "In this Post, I will discuss ReAct, short for Reasoning + Acting, represents a significant advancement in how language models approach complex tasks.",
-      tags: ["LLM", "Multi-agent systems", "Research"]
+      tags: ["LLM", "Multi-agent systems", "Reasoning"]
     },
     {
       id: 2,
       title: "Reflection of Voyager: An Open-Ended Embodied Agent with Large Language Models",
       date: "May 17, 2025",
       excerpt: "Lifelong learning agent",
-      tags: ["LLM", "Multi-agent systems", "Memory","Research"]
+      tags: ["LLM", "Multi-agent systems", "Self-Driven Exploration","Minecraft"]
     },
     // {
     //   id: 3,
