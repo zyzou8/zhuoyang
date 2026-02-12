@@ -8,6 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p>© {new Date().getFullYear()} Zhuoyang Zou. All rights reserved.</p>
+            <p className="text-sm text-gray-500 mt-1">Last updated: February 2026</p>
           </div>
           
           <div className="flex space-x-6">
