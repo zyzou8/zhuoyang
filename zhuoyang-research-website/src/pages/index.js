@@ -3,6 +3,7 @@ import Education from '../components/Education';
 import Publications from '../components/Publications';
 import ResearchInterests from '../components/ResearchInterests';
 import { FaEnvelope, FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
+import { SiGooglescholar } from 'react-icons/si';
 import { getAssetPath } from '../utils/assetPath';
 
 export default function Home() {
@@ -55,6 +56,16 @@ export default function Home() {
               >
                 <FaLinkedin className="text-blue-700 mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">LinkedIn</span>
+              </a>
+
+              <a
+                href="https://scholar.google.com/citations?user=n8gewTkAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+              >
+                <SiGooglescholar className="text-blue-700 mr-3 flex-shrink-0" size={18} />
+                <span className="text-sm">Google Scholar</span>
               </a>
 
               <a

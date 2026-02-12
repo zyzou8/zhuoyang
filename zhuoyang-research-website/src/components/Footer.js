@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { SiGooglescholar } from 'react-icons/si';
 
 export default function Footer() {
   return (
@@ -19,6 +20,9 @@ export default function Footer() {
             </a>
             <a href="https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition duration-300">
               <FaLinkedin className="text-xl" />
+            </a>
+            <a href="https://scholar.google.com/citations?user=n8gewTkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition duration-300">
+              <SiGooglescholar className="text-xl" />
             </a>
           </div>
         </div>
