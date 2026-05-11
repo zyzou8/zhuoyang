@@ -9,7 +9,7 @@ const publications = [
     year: "2026",
     arxiv: "https://arxiv.org/abs/2603.22619",
     pdf: "https://arxiv.org/pdf/2603.22619",
-    color: "bg-gray-100 text-gray-700",
+    color: "bg-slate-100 text-slate-700",
     thumb: "DeIllusinLLM.png",
   },
   {
@@ -20,7 +20,7 @@ const publications = [
     year: "2026",
     arxiv: "https://arxiv.org/abs/2604.01306",
     pdf: "https://arxiv.org/pdf/2604.01306",
-    color: "bg-gray-100 text-gray-700",
+    color: "bg-slate-100 text-slate-700",
     thumb: "M2_Verify.png",
   },
   {
@@ -31,7 +31,7 @@ const publications = [
     year: "2026",
     arxiv: "https://arxiv.org/abs/2601.07611",
     pdf: "https://arxiv.org/pdf/2601.07611",
-    color: "bg-gray-100 text-gray-700",
+    color: "bg-slate-100 text-slate-700",
     thumb: "DIAGPaper.jpg",
   },
   {
@@ -42,7 +42,7 @@ const publications = [
     year: "2025",
     arxiv: "https://arxiv.org/abs/2504.18406",
     pdf: "https://arxiv.org/pdf/2504.18406",
-    color: "bg-sky-100 text-sky-800",
+    color: "bg-slate-100 text-slate-700",
     thumb: "HRScene.png",
   },
   {
@@ -53,8 +53,8 @@ const publications = [
     year: "2024",
     arxiv: "https://arxiv.org/abs/2410.22394",
     pdf: "https://arxiv.org/pdf/2410.22394",
-    color: "bg-purple-100 text-purple-800",
-    thumb: "AAAR",
+    color: "bg-slate-100 text-slate-700",
+    thumb: "AAAR.png",
   },
   {
     title: "Optimizing Deep Learning Models: CNN-RNN Augmentation with Grad-CAM Analysis for Predicting Pneumonitis from Pre-Treatment CT Images",
@@ -64,16 +64,16 @@ const publications = [
     year: "2024",
     arxiv: null,
     pdf: "https://www.redjournal.org/article/S0360-3016(24)02234-X/fulltext",
-    color: "bg-orange-100 text-orange-800",
+    color: "bg-slate-100 text-slate-700",
     thumb: "iTox_website.png",
   },
 ];
 
 const VENUE_STYLE = {
-  ICML:   { bg: '#7c3aed', text: '#fff' },
-  ICCV:   { bg: '#0369a1', text: '#fff' },
-  arXiv:  { bg: '#374151', text: '#fff' },
-  IJROBP: { bg: '#c2410c', text: '#fff' },
+  ICML:   { bg: '#334155', text: '#fff' },
+  ICCV:   { bg: '#334155', text: '#fff' },
+  arXiv:  { bg: '#334155', text: '#fff' },
+  IJROBP: { bg: '#334155', text: '#fff' },
 };
 
 function PaperThumb({ venueShort, year, thumb }) {
