@@ -67,15 +67,32 @@ const publications = [
   },
 ];
 
-function PaperThumb({ venueShort, color }) {
+const VENUE_STYLE = {
+  ICML:   { bg: '#7c3aed', text: '#fff' },
+  ICCV:   { bg: '#0369a1', text: '#fff' },
+  arXiv:  { bg: '#374151', text: '#fff' },
+  IJROBP: { bg: '#c2410c', text: '#fff' },
+};
+
+function PaperThumb({ venueShort, year, thumb }) {
+  if (thumb) {
+    return (
+      <img src={thumb} alt={venueShort} className="w-28 h-20 rounded border border-gray-200 object-cover flex-shrink-0 shadow-sm" />
+    );
+  }
+  const s = VENUE_STYLE[venueShort] || VENUE_STYLE['arXiv'];
   return (
-    <div className={`w-28 h-20 rounded border border-gray-200 flex flex-col overflow-hidden flex-shrink-0 shadow-sm`}>
-      <div className={`h-5 flex items-center justify-center text-xs font-bold ${color}`}>
-        {venueShort}
+    <div
+      className="w-28 h-20 rounded border border-gray-200 flex flex-col overflow-hidden flex-shrink-0 shadow-sm"
+      style={{ backgroundColor: s.bg }}
+    >
+      <div className="flex-1 flex flex-col items-center justify-center gap-0.5">
+        <span className="text-sm font-extrabold tracking-widest" style={{ color: s.text }}>{venueShort}</span>
+        <span className="text-xs opacity-70" style={{ color: s.text }}>{year}</span>
       </div>
-      <div className="flex-1 bg-white p-1.5 flex flex-col gap-1 justify-center">
-        {[70, 90, 60, 80, 50].map((w, i) => (
-          <div key={i} className="h-1 rounded-full bg-gray-200" style={{ width: `${w}%` }} />
+      <div className="h-4 bg-white flex flex-col justify-center gap-0.5 px-2">
+        {[100, 75, 55].map((w, i) => (
+          <div key={i} className="rounded-full" style={{ height: 2, width: `${w}%`, backgroundColor: '#d1d5db' }} />
         ))}
       </div>
     </div>
@@ -105,7 +122,7 @@ export default function Publications() {
           <div key={index} className="flex gap-4 group">
             {/* Thumbnail */}
             <div className="pt-1">
-              <PaperThumb venueShort={pub.venueShort} color={pub.color} />
+              <PaperThumb venueShort={pub.venueShort} year={pub.year} thumb={pub.thumb} />
             </div>
 
             {/* Details */}
