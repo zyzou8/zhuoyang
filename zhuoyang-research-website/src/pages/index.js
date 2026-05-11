@@ -15,7 +15,7 @@ export default function Home() {
           <div className="bg-white rounded-lg shadow-md p-6 sticky top-8">
             {/* Profile Section */}
             <div className="flex flex-col items-center mb-6">
-              <div className="w-48 h-48 rounded-full overflow-hidden mb-4 border-4 border-blue-100">
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-4 border-4 border-orange-100">
                 <img
                   src={getAssetPath("profile-photo.jpg")}
                   alt="Zhuoyang Zou"
@@ -32,9 +32,9 @@ export default function Home() {
             <div className="space-y-3 mb-6 pb-6 border-b">
               <a
                 href="mailto:mintzou2000@gmail.com"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
               >
-                <FaEnvelope className="text-blue-700 mr-3 flex-shrink-0" size={18} />
+                <FaEnvelope className="text-orange-700 mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">mintzou2000@gmail.com</span>
               </a>
 
@@ -42,9 +42,9 @@ export default function Home() {
                 href="https://github.com/zyzou8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
               >
-                <FaGithub className="text-blue-700 mr-3 flex-shrink-0" size={18} />
+                <FaGithub className="text-orange-700 mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">GitHub</span>
               </a>
 
@@ -52,9 +52,9 @@ export default function Home() {
                 href="https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
               >
-                <FaLinkedin className="text-blue-700 mr-3 flex-shrink-0" size={18} />
+                <FaLinkedin className="text-orange-700 mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">LinkedIn</span>
               </a>
 
@@ -62,9 +62,9 @@ export default function Home() {
                 href="https://scholar.google.com/citations?user=n8gewTkAAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
               >
-                <SiGooglescholar className="text-blue-700 mr-3 flex-shrink-0" size={18} />
+                <SiGooglescholar className="text-orange-700 mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">Google Scholar</span>
               </a>
 
@@ -72,9 +72,9 @@ export default function Home() {
                 href={getAssetPath("zhuoyangzou.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-700 hover:text-orange-600 transition-colors"
               >
-                <FaFilePdf className="text-blue-700 mr-3 flex-shrink-0" size={18} />
+                <FaFilePdf className="text-orange-700 mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm font-medium">CV / Resume</span>
               </a>
             </div>
@@ -96,7 +96,7 @@ export default function Home() {
                     <span className="text-gray-400 font-medium w-16 flex-shrink-0 pt-0.5">{item.date}</span>
                     <span className="text-gray-600 leading-snug">
                       {item.link ? (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:underline">{item.text}</a>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 hover:underline">{item.text}</a>
                       ) : item.text}
                     </span>
                   </li>
@@ -115,7 +115,7 @@ export default function Home() {
         <div className="md:col-span-2 space-y-6">
           {/* About Me */}
           <section id="about" className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">About Me</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-orange-500 pb-2">About Me</h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 I am a PhD student in Computer Science at Pennsylvania State University, working under the supervision of{' '}
@@ -123,7 +123,7 @@ export default function Home() {
                   href="https://www.wenpengyin.org/home"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-orange-600 hover:underline font-medium"
                 >
                   Prof. Wenpeng Yin
                 </a>
