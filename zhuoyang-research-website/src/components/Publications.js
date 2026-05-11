@@ -129,7 +129,7 @@ function AuthorList({ authors }) {
 export default function Publications() {
   return (
     <section id="publications" className="bg-white rounded-lg shadow-md p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-orange-500 pb-2">Publications</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">Publications</h2>
 
       <div className="space-y-5">
         {publications.map((pub, index) => (
@@ -145,7 +145,7 @@ export default function Publications() {
                 href={pub.arxiv || pub.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-base font-semibold text-orange-900 hover:text-orange-600 hover:underline leading-snug"
+                className="text-base font-semibold text-gray-900 hover:text-blue-600 hover:underline leading-snug"
               >
                 {pub.title}
               </a>

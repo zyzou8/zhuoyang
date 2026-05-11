@@ -16,7 +16,7 @@ export default function ResearchInterests() {
 
   return (
     <section id="research-interests" className="my-8">
-      <h2 className="text-2xl font-bold mb-4 text-orange-900 border-b-2 border-orange-700 pb-2">Research Interests</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-900 border-b-2 border-blue-500 pb-2">Research Interests</h2>
       
       <p className="mb-4">
         My research focuses on advancing LLMs, particularly in multi-agent collaboration and deep reasoning capabilities, 
@@ -25,8 +25,8 @@ export default function ResearchInterests() {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         {interests.map((interest, index) => (
-          <div key={index} className="bg-orange-50 p-4 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-orange-800 mb-2">{interest.area}</h3>
+          <div key={index} className="bg-gray-50 p-4 rounded-lg shadow-md">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{interest.area}</h3>
             <p>{interest.description}</p>
           </div>
         ))}

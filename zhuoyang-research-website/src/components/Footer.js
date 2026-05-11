@@ -12,17 +12,17 @@ export default function Footer() {
           </div>
           
           <div className="flex space-x-6">
-            <a href="mailto:mintzou2000@gmail.com" className="hover:text-orange-700 transition duration-300">
+            <a href="mailto:mintzou2000@gmail.com" className="hover:text-gray-900 transition duration-300">
               <FaEnvelope className="text-xl" />
             </a>
             {/* Update these with your actual profiles */}
-            <a href="https://github.com/zyzou8" target="_blank" rel="noopener noreferrer" className="hover:text-orange-700 transition duration-300">
+            <a href="https://github.com/zyzou8" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition duration-300">
               <FaGithub className="text-xl" />
             </a>
-            <a href="https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-700 transition duration-300">
+            <a href="https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition duration-300">
               <FaLinkedin className="text-xl" />
             </a>
-            <a href="https://scholar.google.com/citations?user=n8gewTkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-orange-700 transition duration-300">
+            <a href="https://scholar.google.com/citations?user=n8gewTkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition duration-300">
               <SiGooglescholar className="text-xl" />
             </a>
           </div>
