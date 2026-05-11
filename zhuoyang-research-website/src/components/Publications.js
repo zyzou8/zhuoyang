@@ -2,6 +2,17 @@ import { getImagePath } from '../utils/imagePath';
 
 const publications = [
   {
+    title: "AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason",
+    authors: ["Brian Belland", "Wenpeng Yin", "Zhuoyang Zou", "Jack Mussoline", "Chanmin Kim"],
+    venue: "AI4HE @ CSEDU 2026",
+    venueShort: "AI4HE",
+    year: "2026",
+    arxiv: null,
+    pdf: null,
+    color: "bg-slate-100 text-slate-700",
+    thumb: null,
+  },
+  {
     title: "Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning",
     authors: ["JJ Ahn", "R Kamoi", "B Atil", "R Lou", "WW Kang", "H Park", "SSS Das", "Zhuoyang Zou", "X Lu", "et al."],
     venue: "arXiv",
@@ -74,6 +85,7 @@ const VENUE_STYLE = {
   ICCV:   { bg: '#334155', text: '#fff' },
   arXiv:  { bg: '#334155', text: '#fff' },
   IJROBP: { bg: '#334155', text: '#fff' },
+  AI4HE:  { bg: '#334155', text: '#fff' },
 };
 
 function PaperThumb({ venueShort, year, thumb }) {
