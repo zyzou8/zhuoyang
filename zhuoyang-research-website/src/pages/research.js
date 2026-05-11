@@ -5,10 +5,11 @@ import { getImagePath } from '../utils/imagePath';
 export default function Research() {
   const projects = [
     {
-      title: "Multi-agent LLM System for Research Evaluation",
+      title: "AAAR-1.0: Assessing AI's Potential to Assist Research",
       period: "2024 - Present",
-      description: "Developing a collaborative AI system where multiple language models work together to identify weaknesses in research papers, generate critiques, and suggest improvements.",
-      technologies: ["GPT-4", "Llama", "Claude", "Agent", "Science"],
+      description: "Built a comprehensive benchmark (AAAR-1.0) to evaluate LLMs on authentic research tasks — equation inference, experiment design, and paper weakness identification. Led to a follow-up multi-agent system (DIAGPaper) that uses collaborative reasoning to diagnose valid and specific weaknesses in scientific papers. ICML 2025, Workshop Best Paper Award.",
+      technologies: ["GPT-4", "Llama", "Claude", "Multi-Agent", "Benchmark", "NLP"],
+      link: "https://arxiv.org/abs/2410.22394",
       image: "agent.png"
     },
     {
@@ -79,6 +80,13 @@ export default function Research() {
                         ))}
                       </div>
                     </div>
+                    {project.link && (
+                      <div className="mt-4">
+                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-sm">
+                          [arXiv]
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
