@@ -79,8 +79,35 @@ export default function Home() {
               </a>
             </div>
 
+            {/* Updates */}
+            <div className="mt-6 pt-6 border-t">
+              <h2 className="text-base font-bold text-gray-800 mb-3">Updates</h2>
+              <ul className="space-y-2.5">
+                {[
+                  { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
+                  { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
+                  { date: "Apr 2026", text: "New preprint: M2-Verify — A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency.", link: "https://arxiv.org/abs/2604.01306" },
+                  { date: "Jan 2026", text: "New preprint: DIAGPaper — Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning.", link: "https://arxiv.org/abs/2601.07611" },
+                  { date: "Jun 2025", text: "HRScene accepted at ICCV 2025.", link: "https://arxiv.org/abs/2504.18406" },
+                  { date: "May 2025", text: "AAAR-1.0 received the Workshop Best Paper Award at ICML 2025.", link: "https://arxiv.org/abs/2410.22394" },
+                  { date: "Sep 2024", text: "Started PhD in Computer Science at Pennsylvania State University." },
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-2 items-start text-xs">
+                    <span className="text-gray-400 font-medium w-16 flex-shrink-0 pt-0.5">{item.date}</span>
+                    <span className="text-gray-600 leading-snug">
+                      {item.link ? (
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:underline">{item.text}</a>
+                      ) : item.text}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Education */}
-            <Education />
+            <div className="mt-6 pt-6 border-t">
+              <Education />
+            </div>
           </div>
         </div>
 
@@ -110,31 +137,6 @@ export default function Home() {
 
           {/* Research Interests */}
           <ResearchInterests />
-
-          {/* Updates */}
-          <section id="updates" className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2">Updates</h2>
-            <ul className="space-y-3">
-              {[
-                { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
-                { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
-                { date: "Apr 2026", text: "New preprint: M2-Verify — A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency.", link: "https://arxiv.org/abs/2604.01306" },
-                { date: "Jan 2026", text: "New preprint: DIAGPaper — Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning.", link: "https://arxiv.org/abs/2601.07611" },
-                { date: "Jun 2025", text: "HRScene accepted at ICCV 2025.", link: "https://arxiv.org/abs/2504.18406" },
-                { date: "May 2025", text: "AAAR-1.0 received the Workshop Best Paper Award at ICML 2025.", link: "https://arxiv.org/abs/2410.22394" },
-                { date: "Sep 2024", text: "Started PhD in Computer Science at Pennsylvania State University." },
-              ].map((item, i) => (
-                <li key={i} className="flex gap-4 items-start text-sm">
-                  <span className="text-gray-400 font-medium w-20 flex-shrink-0">{item.date}</span>
-                  <span className="text-gray-700">
-                    {item.link ? (
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:underline">{item.text}</a>
-                    ) : item.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
 
           {/* Publications */}
           <Publications />
