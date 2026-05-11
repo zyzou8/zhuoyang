@@ -1,3 +1,5 @@
+import { getImagePath } from '../utils/imagePath';
+
 const publications = [
   {
     title: "Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning",
@@ -8,7 +10,7 @@ const publications = [
     arxiv: "https://arxiv.org/abs/2603.22619",
     pdf: "https://arxiv.org/pdf/2603.22619",
     color: "bg-gray-100 text-gray-700",
-    thumb: null,
+    thumb: "DeIllusinLLM.png",
   },
   {
     title: "M2-Verify: A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency",
@@ -19,7 +21,7 @@ const publications = [
     arxiv: "https://arxiv.org/abs/2604.01306",
     pdf: "https://arxiv.org/pdf/2604.01306",
     color: "bg-gray-100 text-gray-700",
-    thumb: null,
+    thumb: "M2_Verify.png",
   },
   {
     title: "DIAGPaper: Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning",
@@ -30,7 +32,7 @@ const publications = [
     arxiv: "https://arxiv.org/abs/2601.07611",
     pdf: "https://arxiv.org/pdf/2601.07611",
     color: "bg-gray-100 text-gray-700",
-    thumb: null,
+    thumb: "DIAGPaper.jpg",
   },
   {
     title: "HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?",
@@ -41,7 +43,7 @@ const publications = [
     arxiv: "https://arxiv.org/abs/2504.18406",
     pdf: "https://arxiv.org/pdf/2504.18406",
     color: "bg-sky-100 text-sky-800",
-    thumb: null,
+    thumb: "HRScene.png",
   },
   {
     title: "AAAR-1.0: Assessing AI's Potential to Assist Research",
@@ -52,7 +54,7 @@ const publications = [
     arxiv: "https://arxiv.org/abs/2410.22394",
     pdf: "https://arxiv.org/pdf/2410.22394",
     color: "bg-purple-100 text-purple-800",
-    thumb: null,
+    thumb: "AAAR",
   },
   {
     title: "Optimizing Deep Learning Models: CNN-RNN Augmentation with Grad-CAM Analysis for Predicting Pneumonitis from Pre-Treatment CT Images",
@@ -63,7 +65,7 @@ const publications = [
     arxiv: null,
     pdf: "https://www.redjournal.org/article/S0360-3016(24)02234-X/fulltext",
     color: "bg-orange-100 text-orange-800",
-    thumb: null,
+    thumb: "iTox_website.png",
   },
 ];
 
@@ -77,7 +79,7 @@ const VENUE_STYLE = {
 function PaperThumb({ venueShort, year, thumb }) {
   if (thumb) {
     return (
-      <img src={thumb} alt={venueShort} className="w-28 h-20 rounded border border-gray-200 object-cover flex-shrink-0 shadow-sm" />
+      <img src={getImagePath(thumb)} alt={venueShort} className="w-28 h-20 rounded border border-gray-200 object-cover flex-shrink-0 shadow-sm" />
     );
   }
   const s = VENUE_STYLE[venueShort] || VENUE_STYLE['arXiv'];
