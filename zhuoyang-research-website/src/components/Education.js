@@ -5,7 +5,7 @@ export default function Education() {
       degree: "PhD in Computer Science",
       period: "Sep. 2024 – Present",
       location: "University Park, PA",
-      details:<a href="https://www.wenpengyin.org/ai4research-lab" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+      details:<a href="https://www.wenpengyin.org/ai4research-lab" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">
       PI: Prof. Wenpeng Yin
     </a>
     },
@@ -14,7 +14,7 @@ export default function Education() {
       degree: "Master of Science in Artificial Intelligence",
       period: "Sep. 2022 – Dec. 2023",
       location: "Evanston, IL",
-      details:<a href="https://www.mccormick.northwestern.edu/artificial-intelligence/people/alumni/2023-graduates.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+      details:<a href="https://www.mccormick.northwestern.edu/artificial-intelligence/people/alumni/2023-graduates.html" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">
       2023 Cohorts
     </a>
     },
@@ -23,7 +23,7 @@ export default function Education() {
       degree: "Bachelor of Science in Computer Science",
       period: "Sep. 2017 – May 2022",
       location: "Hong Kong",
-      details:<a href="https://www.cse.cuhk.edu.hk/~qdou/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+      details:<a href="https://www.cse.cuhk.edu.hk/~qdou/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">
       PI: Prof. Qi Dou
     </a>
     }

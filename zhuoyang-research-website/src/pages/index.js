@@ -32,9 +32,9 @@ export default function Home() {
             <div className="space-y-3 mb-6 pb-6 border-b">
               <a
                 href="mailto:mintzou2000@gmail.com"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <FaEnvelope className="text-blue-600 mr-3 flex-shrink-0" size={18} />
+                <FaEnvelope style={{ color: '#EA4335' }} className="mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">mintzou2000@gmail.com</span>
               </a>
 
@@ -42,9 +42,9 @@ export default function Home() {
                 href="https://github.com/zyzou8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <FaGithub className="text-blue-600 mr-3 flex-shrink-0" size={18} />
+                <FaGithub style={{ color: '#181717' }} className="mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">GitHub</span>
               </a>
 
@@ -52,9 +52,9 @@ export default function Home() {
                 href="https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <FaLinkedin className="text-blue-600 mr-3 flex-shrink-0" size={18} />
+                <FaLinkedin style={{ color: '#0A66C2' }} className="mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">LinkedIn</span>
               </a>
 
@@ -62,9 +62,9 @@ export default function Home() {
                 href="https://scholar.google.com/citations?user=n8gewTkAAAAJ&hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <SiGooglescholar className="text-blue-600 mr-3 flex-shrink-0" size={18} />
+                <SiGooglescholar style={{ color: '#4285F4' }} className="mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm">Google Scholar</span>
               </a>
 
@@ -72,9 +72,9 @@ export default function Home() {
                 href={getAssetPath("zhuoyangzou.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <FaFilePdf className="text-blue-600 mr-3 flex-shrink-0" size={18} />
+                <FaFilePdf style={{ color: '#E53E3E' }} className="mr-3 flex-shrink-0" size={18} />
                 <span className="text-sm font-medium">CV / Resume</span>
               </a>
             </div>
@@ -84,6 +84,8 @@ export default function Home() {
               <h2 className="text-base font-bold text-gray-800 mb-3">Updates</h2>
               <ul className="space-y-2.5">
                 {[
+                  { date: "2026-2027", text: "Selected as a trainee in the LinDiv 2026-2027 cohort.", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
+                  { date: "May 2026", text: "Gave a talk on DIAG at NE Agent Day (May 8, 2026)." },
                   { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
                   { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
                   { date: "Apr 2026", text: "New preprint: M2-Verify — A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency.", link: "https://arxiv.org/abs/2604.01306" },
@@ -96,7 +98,7 @@ export default function Home() {
                     <span className="text-gray-400 font-medium w-16 flex-shrink-0 pt-0.5">{item.date}</span>
                     <span className="text-gray-600 leading-snug">
                       {item.link ? (
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:underline">{item.text}</a>
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 hover:underline">{item.text}</a>
                       ) : item.text}
                     </span>
                   </li>
@@ -115,7 +117,7 @@ export default function Home() {
         <div className="md:col-span-2 space-y-6">
           {/* About Me */}
           <section id="about" className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">About Me</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">About Me</h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 I am a PhD student in Computer Science at Pennsylvania State University, working under the supervision of{' '}
@@ -123,7 +125,7 @@ export default function Home() {
                   href="https://www.wenpengyin.org/home"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline font-medium"
+                  className="text-gray-900 hover:underline font-medium"
                 >
                   Prof. Wenpeng Yin
                 </a>
