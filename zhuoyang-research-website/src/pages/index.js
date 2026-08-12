@@ -84,8 +84,8 @@ export default function Home() {
               <h2 className="text-base font-bold text-gray-800 mb-3">Updates</h2>
               <ul className="space-y-2.5">
                 {[
-                  { date: "2026", text: "Awarded the Workday AI Fellowship ($100,000 grant)." },
-                  { date: "2026 – 2027", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan: Transforming Training to Advance Human-Technology Interaction (#2125865).", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
+                  { date: "2026", text: "Awarded the Workday AI PhD Fellowship ($100,000 grant)." },
+                  { date: "2026 – 2027", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan (#2125865).", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
                   { date: "May 2026", text: "Gave a talk on DIAG at NE Agent Day (May 8, 2026)." },
                   { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
                   { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
