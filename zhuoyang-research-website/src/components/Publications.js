@@ -2,6 +2,17 @@ import { getImagePath } from '../utils/imagePath';
 
 const publications = [
   {
+    title: "Who Wrote It Is Not Enough: Detecting Who Contributed the Insight",
+    authors: ["Zhuoyang Zou", "A Ansari", "J Yang", "DC Zhang", "Q Chen", "D Lee", "Wenpeng Yin"],
+    venue: "arXiv",
+    venueShort: "arXiv",
+    year: "2026",
+    arxiv: "https://arxiv.org/abs/2610.07365",
+    pdf: "https://arxiv.org/pdf/2610.07365",
+    color: "bg-slate-100 text-slate-700",
+    thumb: "InsightProv.png",
+  },
+  {
     title: "AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason",
     authors: ["Brian Belland", "Wenpeng Yin", "Zhuoyang Zou", "Jack Mussoline", "Chanmin Kim"],
     venue: "AI4HE @ CSEDU 2026",
