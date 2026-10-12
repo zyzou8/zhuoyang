@@ -87,8 +87,8 @@ export default function Home() {
                 {[
                   { date: "Oct 2026", text: "Received the ICDS Rising Researcher Award (ICDS_RR26_030179) from Penn State's Institute for Computational and Data Sciences." },
                   { date: "Oct 2026", text: "New preprint: Who Wrote It Is Not Enough — Detecting Who Contributed the Insight.", link: "https://arxiv.org/abs/2610.07365" },
-                  { date: "2026", text: "Awarded the Workday AI PhD Fellowship ($100,000 grant)." },
-                  { date: "2026 – 2027", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan (#2125865).", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
+                  { date: "Aug 2026", text: "Awarded the Workday AI PhD Fellowship ($100,000 grant)." },
+                  { date: "May 2026", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan (#2125865), 2026–2027 cohort.", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
                   { date: "May 2026", text: "Gave a talk on DIAG at NE Agent Day (May 8, 2026)." },
                   { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
                   { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
