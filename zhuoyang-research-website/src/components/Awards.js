@@ -4,7 +4,7 @@ const awards = [
   {
     title: "ICDS Rising Researcher Award",
     org: "Penn State Institute for Computational and Data Sciences",
-    detail: "Award ID: ICDS_RR26_30179",
+    detail: "Award ID: ICDS_RR26_030179",
     year: "2026",
     link: "https://www.icds.psu.edu/",
   },
