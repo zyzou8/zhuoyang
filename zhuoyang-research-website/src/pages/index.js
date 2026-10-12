@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Education from '../components/Education';
 import Publications from '../components/Publications';
+import Awards from '../components/Awards';
 import ResearchInterests from '../components/ResearchInterests';
 import { FaEnvelope, FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
@@ -84,6 +85,7 @@ export default function Home() {
               <h2 className="text-base font-bold text-gray-800 mb-3">Updates</h2>
               <ul className="space-y-2.5">
                 {[
+                  { date: "Oct 2026", text: "Received the ICDS Rising Researcher Award (ICDS_RR26_30179) from Penn State's Institute for Computational and Data Sciences." },
                   { date: "Oct 2026", text: "New preprint: Who Wrote It Is Not Enough — Detecting Who Contributed the Insight.", link: "https://arxiv.org/abs/2610.07365" },
                   { date: "2026", text: "Awarded the Workday AI PhD Fellowship ($100,000 grant)." },
                   { date: "2026 – 2027", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan (#2125865).", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
@@ -144,6 +146,9 @@ export default function Home() {
 
           {/* Publications */}
           <Publications />
+
+          {/* Awards */}
+          <Awards />
         </div>
       </div>
     </Layout>
