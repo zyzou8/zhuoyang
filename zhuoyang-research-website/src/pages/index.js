@@ -65,7 +65,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
               >
-                <FaGithub style={{ color: '#181717' }} className="mr-3 flex-shrink-0" size={18} />
+                <FaGithub className="mr-3 flex-shrink-0 text-[#181717] dark:text-gray-100" size={18} />
                 <span className="text-sm">GitHub</span>
               </a>
 

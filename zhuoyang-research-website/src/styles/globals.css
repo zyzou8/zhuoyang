@@ -18,3 +18,63 @@ h1, h2, h3, h4, h5, h6 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
   letter-spacing: -0.01em;
 }
+/* ---------------------------------------------------------------------------
+   Dark mode
+   The pages use light Tailwind color utilities throughout, so dark mode remaps
+   those utilities here instead of adding dark: variants to every element.
+   Toggled by the "dark" class on <html> (see ThemeToggle and _document.js).
+   --------------------------------------------------------------------------- */
+html.dark {
+  color-scheme: dark;
+  --foreground-rgb: 229, 231, 235;
+  --background-rgb: 15, 17, 21;
+}
+
+html.dark body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Surfaces */
+.dark .bg-white { background-color: #1a1d23; }
+.dark .bg-gray-50 { background-color: #20242b; }
+.dark .bg-gray-100 { background-color: #20242b; }
+.dark .bg-gray-200 { background-color: #2a2f38; }
+.dark .bg-slate-100 { background-color: #2a2f38; }
+.dark .bg-blue-50,
+.dark .bg-blue-100 { background-color: rgba(96, 165, 250, 0.12); }
+.dark .bg-green-50 { background-color: rgba(74, 222, 128, 0.10); }
+.dark .bg-yellow-50 { background-color: rgba(250, 204, 21, 0.10); }
+.dark .bg-purple-50 { background-color: rgba(192, 132, 252, 0.10); }
+.dark .hover\:bg-gray-100:hover { background-color: #2a2f38; }
+.dark .hover\:bg-red-50:hover { background-color: rgba(248, 113, 113, 0.12); }
+.dark .shadow-md,
+.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+/* Text */
+.dark .text-gray-900 { color: #f3f4f6; }
+.dark .text-gray-800 { color: #e5e7eb; }
+.dark .text-gray-700 { color: #d1d5db; }
+.dark .text-gray-600 { color: #a8afbb; }
+.dark .text-gray-500 { color: #8b929e; }
+.dark .text-gray-400 { color: #6f7682; }
+.dark .text-slate-700 { color: #cbd5e1; }
+.dark .text-blue-900,
+.dark .text-blue-800,
+.dark .text-blue-700,
+.dark .text-blue-600 { color: #93b4f5; }
+.dark .text-green-800 { color: #86efac; }
+.dark .text-purple-700 { color: #d8b4fe; }
+.dark .text-red-600 { color: #f87171; }
+.dark .hover\:text-gray-900:hover { color: #ffffff; }
+.dark .hover\:text-gray-600:hover { color: #c4c9d2; }
+
+/* Borders: bare border/border-t/... inherit Tailwind's default gray-200, so reset
+   the default with zero specificity and let colored border utilities still win */
+:where(.dark) *,
+:where(.dark) ::before,
+:where(.dark) ::after { border-color: #2d323b; }
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .border-gray-300 { border-color: #2d323b; }
+.dark .border-red-200 { border-color: rgba(248, 113, 113, 0.4); }

@@ -4,6 +4,12 @@ export default function Document() {
   return (
     <Html>
       <Head>
+        {/* Apply the saved (or system) color theme before first paint to avoid a flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}})();`,
+          }}
+        />
         {/* Include Tailwind directly from CDN as a fallback */}
         <link 
           href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" 
