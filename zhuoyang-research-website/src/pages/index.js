@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Layout from '../components/Layout';
 import Education from '../components/Education';
 import Publications from '../components/Publications';
@@ -8,7 +9,25 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
 import { getAssetPath } from '../utils/assetPath';
 
+const NEWS = [
+  { date: "Oct 2026", text: "Received the ICDS Rising Researcher Award (ICDS_RR26_030179) from Penn State's Institute for Computational and Data Sciences." },
+  { date: "Oct 2026", text: "New preprint: Who Wrote It Is Not Enough — Detecting Who Contributed the Insight.", link: "https://arxiv.org/abs/2610.07365" },
+  { date: "Aug 2026", text: "Awarded the Workday AI PhD Fellowship ($100,000 grant)." },
+  { date: "May 2026", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan (#2125865), 2026–2027 cohort.", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
+  { date: "May 2026", text: "Gave a talk on DIAG at NE Agent Day (May 8, 2026)." },
+  { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
+  { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
+  { date: "Apr 2026", text: "New preprint: M2-Verify — A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency.", link: "https://arxiv.org/abs/2604.01306" },
+  { date: "Jan 2026", text: "New preprint: DIAGPaper — Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning.", link: "https://arxiv.org/abs/2601.07611" },
+  { date: "Jun 2025", text: "HRScene accepted at ICCV 2025.", link: "https://arxiv.org/abs/2504.18406" },
+  { date: "May 2025", text: "AAAR-1.0 received the Workshop Best Paper Award at ICML 2025.", link: "https://arxiv.org/abs/2410.22394" },
+  { date: "Sep 2024", text: "Started PhD in Computer Science at Pennsylvania State University." },
+];
+const NEWS_PREVIEW_COUNT = 6;
+
 export default function Home() {
+  const [showAllNews, setShowAllNews] = useState(false);
+
   return (
     <Layout>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -81,24 +100,11 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Updates */}
+            {/* News */}
             <div className="mt-6 pt-6 border-t">
-              <h2 className="text-base font-bold text-gray-800 mb-3">Updates</h2>
+              <h2 className="text-base font-bold text-gray-800 mb-3">News</h2>
               <ul className="space-y-2.5">
-                {[
-                  { date: "Oct 2026", text: "Received the ICDS Rising Researcher Award (ICDS_RR26_030179) from Penn State's Institute for Computational and Data Sciences." },
-                  { date: "Oct 2026", text: "New preprint: Who Wrote It Is Not Enough — Detecting Who Contributed the Insight.", link: "https://arxiv.org/abs/2610.07365" },
-                  { date: "Aug 2026", text: "Awarded the Workday AI PhD Fellowship ($100,000 grant)." },
-                  { date: "May 2026", text: "NSF Research Traineeship Fellow – Linguistic Diversity Across the Lifespan (#2125865), 2026–2027 cohort.", link: "https://lindiv.la.psu.edu/trainee-cohort/" },
-                  { date: "May 2026", text: "Gave a talk on DIAG at NE Agent Day (May 8, 2026)." },
-                  { date: "May 2026", text: "Paper accepted at AI4HE @ CSEDU 2026: AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason." },
-                  { date: "May 2026", text: "New preprint: Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.", link: "https://arxiv.org/abs/2603.22619" },
-                  { date: "Apr 2026", text: "New preprint: M2-Verify — A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency.", link: "https://arxiv.org/abs/2604.01306" },
-                  { date: "Jan 2026", text: "New preprint: DIAGPaper — Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning.", link: "https://arxiv.org/abs/2601.07611" },
-                  { date: "Jun 2025", text: "HRScene accepted at ICCV 2025.", link: "https://arxiv.org/abs/2504.18406" },
-                  { date: "May 2025", text: "AAAR-1.0 received the Workshop Best Paper Award at ICML 2025.", link: "https://arxiv.org/abs/2410.22394" },
-                  { date: "Sep 2024", text: "Started PhD in Computer Science at Pennsylvania State University." },
-                ].map((item, i) => (
+                {(showAllNews ? NEWS : NEWS.slice(0, NEWS_PREVIEW_COUNT)).map((item, i) => (
                   <li key={i} className="flex gap-2 items-start text-xs">
                     <span className="text-gray-400 font-medium w-16 flex-shrink-0 pt-0.5">{item.date}</span>
                     <span className="text-gray-600 leading-snug">
@@ -109,6 +115,15 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+              {NEWS.length > NEWS_PREVIEW_COUNT && (
+                <button
+                  type="button"
+                  onClick={() => setShowAllNews(!showAllNews)}
+                  className="mt-3 text-xs font-medium text-gray-500 hover:text-gray-900 hover:underline"
+                >
+                  {showAllNews ? 'Show less' : `Show all (${NEWS.length})`}
+                </button>
+              )}
             </div>
 
             {/* Education */}
