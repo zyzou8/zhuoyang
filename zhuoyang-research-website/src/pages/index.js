@@ -10,7 +10,7 @@ import { getAssetPath } from '../utils/assetPath';
 
 export default function Home() {
   return (
-    <Layout title="Zhuoyang Zou - AI Researcher">
+    <Layout>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left sidebar */}
         <div className="md:col-span-1">
