@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import Education from '../components/Education';
 import Publications from '../components/Publications';
 import Awards from '../components/Awards';
+import VisitorMap from '../components/VisitorMap';
 import ResearchInterests from '../components/ResearchInterests';
 import { FaEnvelope, FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import { SiGooglescholar } from 'react-icons/si';
@@ -113,6 +114,11 @@ export default function Home() {
             {/* Education */}
             <div className="mt-6 pt-6 border-t">
               <Education />
+            </div>
+
+            {/* Visitors */}
+            <div className="mt-6 pt-6 border-t">
+              <VisitorMap />
             </div>
           </div>
         </div>
