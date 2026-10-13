@@ -32,7 +32,7 @@ const PERSON_JSON_LD = {
   sameAs: [
     'https://scholar.google.com/citations?user=n8gewTkAAAAJ',
     'https://github.com/zyzou8',
-    'https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/',
+    'https://www.linkedin.com/in/zhuoyangzou/',
   ],
 };
 

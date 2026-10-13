@@ -51,7 +51,7 @@ export default function Home() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/zhuoyang-zou-44b2b3238/"
+                href="https://www.linkedin.com/in/zhuoyangzou/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
