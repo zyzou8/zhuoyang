@@ -6,25 +6,19 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{xcolor}
 \usepackage{iftex}
 \ifPDFTeX
   \input{glyphtounicode}
   \pdfgentounicode=1
 \fi
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\pagestyle{empty}
 
 \addtolength{\oddsidemargin}{-0.55in}
 \addtolength{\evensidemargin}{-0.55in}
@@ -37,132 +31,146 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section header: bold, small caps, black rule
-\titleformat{\section}{
-  \vspace{-4pt}\bfseries\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+% ---- Section header ----
+\titleformat{\section}{\bfseries\scshape\raggedright\large}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
 
 % ---- Commands ----
+% Two-line entry header: org | dates  /  role | location
+\newcommand{\entry}[4]{%
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & \small #2 \\
+    \small\textit{#3} & \small\textit{#4}
+  \end{tabular*}\par\vspace{1pt}}
 
-% Role header: org+dates on one line, role+location on second line
-\newcommand{\roleHead}[4]{
-  \vspace{4pt}
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \small\textit{#2} \\
-    \textit{\small #3} & \textit{\small #4}
-  \end{tabular*}
-  \vspace{-6pt}
-}
+% One-line item with right-aligned date
+\newcommand{\dated}[2]{\item #1 \hfill #2}
 
-\newcommand{\cvItem}[1]{\item\small{#1}\vspace{-2pt}}
+% Lists
+\newenvironment{cvlist}
+  {\begin{itemize}[leftmargin=0.16in, label=\textbullet, itemsep=2pt, parsep=0pt, topsep=2pt]\small}
+  {\end{itemize}\vspace{3pt}}
 
-\newcommand{\cvListStart}{\begin{itemize}[leftmargin=0.18in, label=\textbullet, itemsep=1pt, parsep=0pt]}
-\newcommand{\cvListEnd}{\end{itemize}\vspace{2pt}}
+% Project bullet: name, tools, description
+\newcommand{\proj}[3]{\item \textbf{#1} \textit{[#2]}: #3}
 
 %===========================
 \begin{document}
 
 %----- HEADER -----
 \begin{center}
-  {\LARGE\bfseries\scshape Zhuoyang Zou}\\[5pt]
+  {\LARGE\bfseries\scshape Zhuoyang Zou}\\[6pt]
   \small
-  \faPhone\ (773)\,290-4562 \quad
-  \href{mailto:zhuoyangzou@psu.edu}{\faEnvelope\ zhuoyangzou@psu.edu} \quad
-  \href{https://zyzou8.github.io/zhuoyang/}{\faGlobe\ Personal Website} \quad
-  \href{https://github.com/zyzou8}{\faGithub\ zyzou8} \quad
-  \href{https://scholar.google.com/citations?user=n8gewTkAAAAJ}{\faGraduationCap\ Google Scholar} \quad
-  \href{https://www.linkedin.com/in/zhuoyangzou/}{\faLinkedin\ LinkedIn}
+  \faPhone\ (773)\,290-4562 \quad\textbar\quad
+  \href{mailto:zhuoyangzou@psu.edu}{\faEnvelope\ zhuoyangzou@psu.edu} \quad\textbar\quad
+  \href{https://zyzou8.github.io/zhuoyang/}{\faGlobe\ zyzou8.github.io/zhuoyang}\\[2pt]
+  \href{https://github.com/zyzou8}{\faGithub\ zyzou8} \quad\textbar\quad
+  \href{https://scholar.google.com/citations?user=n8gewTkAAAAJ}{\faGraduationCap\ Google Scholar} \quad\textbar\quad
+  \href{https://www.linkedin.com/in/zhuoyangzou/}{\faLinkedin\ zhuoyangzou}
 \end{center}
+\vspace{-6pt}
 
 %----- RESEARCH INTERESTS -----
 \section{Research Interests}
-\cvListStart
-  \cvItem{\textbf{Agentic AI for Science and Healthcare.} Building multi-agent LLM systems that automate real-world scientific workflows, including AI-assisted peer review, clinical decision support, and disease prediction.}
-  \cvItem{\textbf{LLM Reasoning and Agent Design.} Optimizing agent architectures for complex reasoning: adaptive planning, multi-agent debate, tool use, and long-horizon task execution.}
-  \cvItem{\textbf{Evaluation and Trustworthy AI.} Designing benchmarks and detection methods that surface when models exploit spurious or stylistic shortcuts rather than genuine reasoning, and building evaluation pipelines that isolate substantive signal from artifact.}
-\cvListEnd
+\begin{cvlist}
+  \item \textbf{Agentic AI for Science and Healthcare:} multi-agent LLM systems for AI-assisted peer review, clinical decision support, and disease prediction.
+  \item \textbf{LLM Reasoning and Agent Design:} adaptive planning, multi-agent debate, tool use, and long-horizon task execution.
+  \item \textbf{Evaluation and Trustworthy AI:} benchmarks and detection methods that reveal when models rely on stylistic or spurious shortcuts instead of genuine reasoning.
+\end{cvlist}
 
 %----- EDUCATION -----
 \section{Education}
-
-\roleHead{Pennsylvania State University}{Sep.\ 2024 -- Present}{Ph.D.\ in Computer Science, Advisor: Prof.\ Wenpeng Yin}{University Park, PA}
-\vspace{4pt}
-\roleHead{Northwestern University}{Sep.\ 2022 -- Dec.\ 2023}{M.S.\ in Artificial Intelligence}{Evanston, IL}
-\vspace{4pt}
-\roleHead{The Chinese University of Hong Kong}{Sep.\ 2017 -- May 2022}{B.S.\ in Computer Science, Advisor: Prof.\ Qi Dou}{Hong Kong}
+\entry{Pennsylvania State University}{Sep.\ 2024 -- Present}{Ph.D.\ in Computer Science, Advisor: Prof.\ Wenpeng Yin}{University Park, PA}
+\vspace{3pt}
+\entry{Northwestern University}{Sep.\ 2022 -- Dec.\ 2023}{M.S.\ in Artificial Intelligence}{Evanston, IL}
+\vspace{3pt}
+\entry{The Chinese University of Hong Kong}{Sep.\ 2017 -- May 2022}{B.S.\ in Computer Science, Advisor: Prof.\ Qi Dou}{Hong Kong}
 
 %----- AWARDS -----
 \section{Honors and Awards}
-\cvListStart
-  \cvItem{\textbf{ICDS Rising Researcher Award}, Penn State Institute for Computational and Data Sciences (semester stipend and tuition support), 2026}
-  \cvItem{\textbf{Workday AI PhD Fellowship} (\$100,000 grant), 2026}
-  \cvItem{\textbf{NSF Research Traineeship Fellow}, LinDiv: Linguistic Diversity Across the Lifespan (\#2125865), Pennsylvania State University, 2026 -- 2027}
-  \cvItem{\textbf{Workshop Best Paper Award}, ICML 2025, for AAAR-1.0: Assessing AI's Potential to Assist Research}
-\cvListEnd
+\begin{cvlist}
+  \dated{\textbf{ICDS Rising Researcher Award}, Penn State Institute for Computational and Data Sciences}{2026}
+  \dated{\textbf{Workday AI Ph.D.\ Fellowship} (\$100,000 grant)}{2026}
+  \dated{\textbf{NSF Research Traineeship Fellow}, LinDiv: Linguistic Diversity Across the Lifespan (\#2125865)}{2026 -- 2027}
+  \dated{\textbf{Workshop Best Paper Award}, ICML 2025, for \textit{AAAR-1.0}}{2025}
+\end{cvlist}
 
 %----- PUBLICATIONS -----
 \section{Publications}
-
-\cvListStart
-\cvItem{\textbf{Z.\ Zou}, A.\ Ansari, J.\ Yang, D.C.\ Zhang, Q.\ Chen, D.\ Lee, W.\ Yin. \textbf{Who Wrote It Is Not Enough: Detecting Who Contributed the Insight}. \textit{arXiv:2610.07365}, 2026. \href{https://arxiv.org/abs/2610.07365}{[arXiv]}}
-\cvItem{\textbf{Z.\ Zou}, A.\ Ansari, D.C.\ Zhang, D.\ Lee, W.\ Yin. \textbf{DIAGPaper: Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning}. \textit{COLM 2026}. \href{https://arxiv.org/abs/2601.07611}{[arXiv]}}
-\cvItem{J.\ Ahn, R.\ Kamoi, B.\ Atil, R.\ Lou, W.\ Kang, H.\ Park, S.\ Das, \textbf{Z.\ Zou}, et al. \textbf{Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning}. \textit{arXiv:2603.22619}, 2026. \href{https://arxiv.org/abs/2603.22619}{[arXiv]}}
-\cvItem{A.\ Ansari, D.C.\ Zhang, \textbf{Z.\ Zou}, W.\ Yin, D.\ Lee. \textbf{M2-Verify: A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency}. \textit{arXiv:2604.01306}, 2026. \href{https://arxiv.org/abs/2604.01306}{[arXiv]}}
-\cvItem{B.\ Belland, W.\ Yin, \textbf{Z.\ Zou}, J.\ Mussoline, C.\ Kim. \textbf{AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason}. \textit{AI4HE @ CSEDU 2026}. \href{https://www.scitepress.org/Papers/2026/150898/150898.pdf}{[PDF]}}
-\cvItem{R.\ Lou, H.\ Xu, S.\ Wang, J.\ Du, R.\ Kamoi, X.\ Lu, J.\ Xie, Y.\ Sun, Y.\ Zhang, J.\ Ahn, \textbf{Z.\ Zou}, et al. \textbf{AAAR-1.0: Assessing AI's Potential to Assist Research}. \textit{ICML 2025 Workshop}, \textbf{Best Paper Award}. \href{https://arxiv.org/abs/2410.22394}{[arXiv]}}
-\cvItem{Y.\ Zhang, W.\ Zheng, A.\ Madasu, P.\ Shi, R.\ Kamoi, H.\ Zhou, \textbf{Z.\ Zou}, et al. \textbf{HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?} \textit{ICCV 2025}. \href{https://arxiv.org/abs/2504.18406}{[arXiv]}}
-\cvItem{\textbf{Z.\ Zou}, P.T.\ Teo, A.\ Yalamanchili, M.\ Abazeed. \textbf{Optimizing Deep Learning Models: CNN-RNN Augmentation with Grad-CAM Analysis for Predicting Pneumonitis}. \textit{Int.\ J.\ Radiation Oncology, Biology, Physics}, 2024. \href{https://www.redjournal.org/article/S0360-3016(24)02234-X/fulltext}{[Paper]}}
-\cvListEnd
+\begin{cvlist}
+  \item \textbf{Z.\ Zou}, A.\ Ansari, J.\ Yang, D.C.\ Zhang, Q.\ Chen, D.\ Lee, W.\ Yin.
+        \textbf{Who Wrote It Is Not Enough: Detecting Who Contributed the Insight.}
+        \textit{arXiv:2610.07365}, 2026. \href{https://arxiv.org/abs/2610.07365}{[arXiv]}
+  \item \textbf{Z.\ Zou}, A.\ Ansari, D.C.\ Zhang, D.\ Lee, W.\ Yin.
+        \textbf{DIAGPaper: Diagnosing Valid and Specific Weaknesses in Scientific Papers via Multi-Agent Reasoning.}
+        \textit{arXiv:2601.07611}, 2026. \href{https://arxiv.org/abs/2601.07611}{[arXiv]}
+  \item J.\ Ahn, R.\ Kamoi, B.\ Atil, R.\ Lou, W.\ Kang, H.\ Park, S.\ Das, \textbf{Z.\ Zou}, et al.
+        \textbf{Bridging the Know-Act Gap via Task-Level Autoregressive Reasoning.}
+        \textit{arXiv:2603.22619}, 2026. \href{https://arxiv.org/abs/2603.22619}{[arXiv]}
+  \item A.\ Ansari, D.C.\ Zhang, \textbf{Z.\ Zou}, W.\ Yin, D.\ Lee.
+        \textbf{M2-Verify: A Large-Scale Multidomain Benchmark for Checking Multimodal Claim Consistency.}
+        \textit{arXiv:2604.01306}, 2026. \href{https://arxiv.org/abs/2604.01306}{[arXiv]}
+  \item B.\ Belland, W.\ Yin, \textbf{Z.\ Zou}, J.\ Mussoline, C.\ Kim.
+        \textbf{AI-Enabled Automated Scaffolding for Undergraduate Students' Learning to Debug and Reason.}
+        \textit{AI4HE @ CSEDU}, 2026. \href{https://www.scitepress.org/Papers/2026/150898/150898.pdf}{[PDF]}
+  \item R.\ Lou, H.\ Xu, S.\ Wang, J.\ Du, R.\ Kamoi, X.\ Lu, J.\ Xie, Y.\ Sun, Y.\ Zhang, J.\ Ahn, \textbf{Z.\ Zou}, et al.
+        \textbf{AAAR-1.0: Assessing AI's Potential to Assist Research.}
+        \textit{ICML Workshop}, 2025 \textbf{(Best Paper Award)}. \href{https://arxiv.org/abs/2410.22394}{[arXiv]}
+  \item Y.\ Zhang, W.\ Zheng, A.\ Madasu, P.\ Shi, R.\ Kamoi, H.\ Zhou, \textbf{Z.\ Zou}, et al.
+        \textbf{HRScene: How Far Are VLMs from Effective High-Resolution Image Understanding?}
+        \textit{ICCV}, 2025. \href{https://arxiv.org/abs/2504.18406}{[arXiv]}
+  \item \textbf{Z.\ Zou}, P.T.\ Teo, A.\ Yalamanchili, M.\ Abazeed.
+        \textbf{Optimizing Deep Learning Models: CNN-RNN Augmentation with Grad-CAM Analysis for Predicting Pneumonitis.}
+        \textit{Int.\ J.\ Radiation Oncology, Biology, Physics}, 2024. \href{https://www.redjournal.org/article/S0360-3016(24)02234-X/fulltext}{[Paper]}
+\end{cvlist}
 
 %----- RESEARCH EXPERIENCE -----
 \section{Research Experience}
 
-\roleHead{Pennsylvania State University}{Sep.\ 2024 -- Present}{Researcher, Agentic AI \& Multi-Agent LLM Systems}{University Park, PA}
-\cvListStart
-  \cvItem{\textbf{InsightProv} \textit{[Qwen2.5-72B, LoRA, adversarial training]}: Insight-provenance detection for scientific reviews: identifies whether a review's insights come from humans, LLMs, or both. Built \textbf{InsightProv-v0}, 12,000+ reviews on 4,000+ papers with sentence-level provenance labels; two-stage adversarial framework unlearns stylistic authorship shortcuts. Found AI insights stay close to generic or paper-provided content, while human insights add external knowledge and independent judgment.}
-  \cvItem{\textbf{DIAGPaper} \textit{[Python, GPT-4o, Claude, Llama, LangChain]}: Multi-agent LLM framework for automated scientific peer review. Customizer dynamically generates paper-specific criteria; Rebuttal module runs adversarial author--reviewer debate, filtering 40--60\% of invalid critiques; Prioritizer ranks weaknesses by severity, learned from 15,343 real reviews. \textbf{F1 51.89 on AAAR, a 9.4\% improvement over GPT-4o.}}
-  \cvItem{\textbf{AAAR-1.0} \textit{[Python, NLP pipeline, benchmark design]}: Large-scale benchmark for AI-assisted research. \textbf{ICML 2025, Workshop Best Paper Award.}}
-  \cvItem{\textbf{M2-Verify} \textit{[VLMs, multimodal reasoning]}: Multidomain benchmark for multimodal claim consistency across text and image.}
-  \cvItem{\textbf{Bridging the Know-Act Gap} \textit{[LLM agents, autoregressive reasoning]}: Task-level autoregressive reasoning framework closing the gap between LLM knowledge and executable action in agentic settings.}
-\cvListEnd
+\entry{Pennsylvania State University}{Sep.\ 2024 -- Present}{Graduate Researcher, Agentic AI \& Multi-Agent LLM Systems}{University Park, PA}
+\begin{cvlist}
+  \proj{InsightProv}{Qwen2.5-72B, LoRA, adversarial training}{Insight-provenance detection for scientific reviews: identifies whether a review's insights come from humans, LLMs, or both. Built \textbf{InsightProv-v0} (12,000+ reviews on 4,000+ papers, sentence-level labels); a two-stage adversarial framework unlearns stylistic authorship shortcuts. Found that AI insights stay close to generic or paper-provided content, while human insights add external knowledge and independent judgment.}
+  \proj{DIAGPaper}{Python, GPT-4o, Claude, Llama, LangChain}{Multi-agent framework for automated peer review. A Customizer generates paper-specific criteria; a Rebuttal module runs author--reviewer debate, filtering 40--60\% of invalid critiques; a Prioritizer, learned from 15,343 real reviews, ranks weaknesses by severity. \textbf{F1 51.89 on AAAR, 9.4\% above GPT-4o.}}
+  \proj{AAAR-1.0}{Python, benchmark design}{Large-scale benchmark for AI-assisted research. \textbf{ICML 2025 Workshop Best Paper Award.}}
+  \proj{M2-Verify}{VLMs, multimodal reasoning}{Multidomain benchmark for claim consistency across text and images.}
+  \proj{Know-Act Gap}{LLM agents, autoregressive reasoning}{Task-level autoregressive reasoning that turns LLM knowledge into executable actions in agentic settings.}
+\end{cvlist}
 
-\roleHead{Northwestern University Medical School}{Jul.\ 2023 -- May 2024}{Researcher, Medical AI}{Chicago, IL}
-\cvListStart
-  \cvItem{\textbf{iTox} \textit{[PyTorch, CNN-RNN, Grad-CAM]}: Pneumonitis risk prediction from pre-treatment CT scans. \textbf{AUC 0.84.} Grad-CAM localizes predictive lung regions; iTox dose metric reduces pneumonitis risk by \textbf{20\%.}}
-\cvListEnd
+\entry{Northwestern University Medical School}{Jul.\ 2023 -- May 2024}{Researcher, Medical AI}{Chicago, IL}
+\begin{cvlist}
+  \proj{iTox}{PyTorch, CNN-RNN, Grad-CAM}{Pneumonitis risk prediction from pre-treatment CT scans, \textbf{AUC 0.84}. Grad-CAM localizes predictive lung regions; the iTox dose metric reduces pneumonitis risk by \textbf{20\%}.}
+\end{cvlist}
 
-\roleHead{The Chinese University of Hong Kong}{Jan.\ 2022 -- Aug.\ 2022}{Researcher, VR \& Surgical AI}{Hong Kong SAR}
-\cvListStart
-  \cvItem{\textbf{VR Surgical Training System} \textit{[Unity C\#, stereoscopic rendering]}: Simulated Da Vinci surgical procedures with stereoscopic vision for trainee surgeons.}
-  \cvItem{\textbf{Surgical Instrument Segmentation} \textit{[U-Net, PyTorch]}: Segmentation and activity recognition on surgical video; eye tracking for adaptive training.}
-\cvListEnd
+\entry{The Chinese University of Hong Kong}{Jan.\ 2022 -- Aug.\ 2022}{Researcher, VR \& Surgical AI}{Hong Kong}
+\begin{cvlist}
+  \proj{VR Surgical Training}{Unity C\#, stereoscopic rendering}{Simulated da Vinci surgical procedures with stereoscopic vision for trainee surgeons.}
+  \proj{Surgical Instrument Segmentation}{U-Net, PyTorch}{Segmentation and activity recognition on surgical video; eye tracking for adaptive training.}
+\end{cvlist}
 
 %----- INDUSTRY EXPERIENCE -----
 \section{Industry Experience}
 
-\roleHead{High Fashion Group}{May 2024 -- Aug.\ 2024}{AI Specialist}{Hong Kong}
-\cvListStart
-  \cvItem{\textbf{Fabric Recognition System} \textit{[PyTorch, Siamese Network, ResNet]}: Few-shot image similarity model for fabric pattern matching and quality control.}
-  \cvItem{\textbf{Semantic Fabric Search} \textit{[LLM, RAG, vector embeddings]}: Text-to-fabric retrieval using LLM query encoding and dense retrieval over a product database.}
-  \cvItem{\textbf{Trend Forecasting RAG} \textit{[RAG, LLM, structured data]}: Multi-source pipeline for fashion trend analysis and cost-performance reporting.}
-\cvListEnd
+\entry{High Fashion Group}{May 2024 -- Aug.\ 2024}{AI Specialist}{Hong Kong}
+\begin{cvlist}
+  \proj{Fabric Recognition}{PyTorch, Siamese Network, ResNet}{Few-shot image similarity model for fabric pattern matching and quality control.}
+  \proj{Semantic Fabric Search}{LLM, RAG, vector embeddings}{Text-to-fabric retrieval using LLM query encoding and dense retrieval over the product database.}
+  \proj{Trend Forecasting}{RAG, LLM, structured data}{Multi-source pipeline for fashion trend analysis and cost-performance reporting.}
+\end{cvlist}
 
-\roleHead{Karmo International Company Ltd.}{Jun.\ 2022 -- May 2023}{Artificial Intelligence Developer}{Hong Kong}
-\cvListStart
-  \cvItem{\textbf{Construction Safety Detection} \textit{[YOLOv5/v8, OpenCV]}: Real-time safety gear detection deployed at active construction sites.}
-  \cvItem{\textbf{Autonomous Vehicle Detection} \textit{[TensorFlow, object detection]}: Multi-class real-time detection deployed at Hong Kong Science Park.}
-  \cvItem{\textbf{Drainage Prediction System} \textit{[Django, Random Forest, scikit-learn]}: Web app and predictive model for Hong Kong Government Drainage Services.}
-\cvListEnd
+\entry{Karmo International Company Ltd.}{Jun.\ 2022 -- May 2023}{AI Developer}{Hong Kong}
+\begin{cvlist}
+  \proj{Construction Safety Detection}{YOLOv5/v8, OpenCV}{Real-time safety gear detection deployed at active construction sites.}
+  \proj{Autonomous Vehicle Detection}{TensorFlow}{Multi-class real-time object detection deployed at Hong Kong Science Park.}
+  \proj{Drainage Prediction}{Django, Random Forest, scikit-learn}{Web app and predictive model for the Hong Kong Drainage Services Department.}
+\end{cvlist}
 
 %----- TECHNICAL SKILLS -----
 \section{Technical Skills}
-
-\cvListStart
-  \cvItem{\textbf{LLMs \& Agents:} GPT-4o, Claude (Sonnet/Opus), Llama 3, Qwen, Gemini, LangChain, LangGraph, AutoGen, RAG, tool use, chain-of-thought, prompt engineering, multi-agent orchestration}
-  \cvItem{\textbf{AI / ML:} PyTorch, TensorFlow, HuggingFace Transformers, CNN, RNN, YOLO, U-Net, Siamese Networks, Grad-CAM, scikit-learn}
-  \cvItem{\textbf{Data Science \& Statistics:} Pandas, NumPy, statistical analysis, hypothesis testing, experiment design, model evaluation \& benchmarking, data visualization}
-  \cvItem{\textbf{Dev \& Tooling:} Python, Claude Code, Cursor, GitHub Copilot, Docker, Git, Linux, FastAPI, Django, Unity C\#}
-  \cvItem{\textbf{Data \& Infra:} SQL, FAISS, ChromaDB, AWS, distributed training (DeepSpeed ZeRO-3, multi-GPU), Weights \& Biases, Jupyter}
-\cvListEnd
+\begin{cvlist}
+  \item \textbf{LLMs \& Agents:} multi-agent orchestration, tool use, RAG, LoRA fine-tuning, prompt engineering, LangChain, LangGraph, AutoGen
+  \item \textbf{ML \& Training:} PyTorch, HuggingFace Transformers, DeepSpeed ZeRO-3, multi-GPU training, TensorFlow, scikit-learn, Weights \& Biases
+  \item \textbf{Evaluation \& Data:} benchmark design, experiment design, statistical testing, Pandas, NumPy, SQL, FAISS, ChromaDB
+  \item \textbf{Engineering:} Python, C\#, Docker, Git, Linux, AWS, FastAPI, Django, Claude Code, Cursor
+\end{cvlist}
 
 \end{document}
